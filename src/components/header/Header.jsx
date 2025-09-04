@@ -10,6 +10,8 @@ import AcademicsMenu from "./AcademicsMenu";
 import StudentsSectionMenu from "./StudentsSectionMenu";
 import NoticesMenu from "./NoticesMenu";
 import AdmissionsMenu from "./AdmissionsMenu";
+import ToggleTheme from "../ToggleTheme";
+
 
 const Header = () => {
 	const navigate = useNavigate();
@@ -521,8 +523,15 @@ const Header = () => {
 								</div>
 							)}
 						</div>
-					))}
+						
+					)) }
+					
+					<div className="ml-2">
+                        <ToggleTheme />
+                    </div>
+					
 				</nav>
+				
 			</div>
 
 			{/* Mobile Slide Drawer */}
@@ -554,11 +563,13 @@ const Header = () => {
 							</button>
 						</div>
 
+
 						{menuItems.map((menuItem) => (
 							<div
 								key={menuItem.label}
 								className="border-b border-gray-200"
 							>
+								
 								<div
 									className={`px-4 py-3 cursor-pointer transition-all duration-200 font-medium flex justify-between items-center
                     ${activeNav === menuItem.label
@@ -627,10 +638,17 @@ const Header = () => {
 										</div>
 									)}
 							</div>
-						))}
+						))}				
+								{/* Insert ThemeToggle here */}
+							<div className="px-py-" >
+								<ToggleTheme />
+								</div>
+
 					</div>
 				</div>
 			)}
+			
+
 		</div>
 	);
 };
