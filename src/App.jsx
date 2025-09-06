@@ -35,7 +35,7 @@ import EceOverview from "./pages/ECE-Department/ece-overview.jsx";
 import ECE_Faculty from "./pages/ECE-Department/ece-faculty.jsx";
 import EceLabs from "./pages/ECE-Department/ece-labs.jsx";
 import CampusVirtualTour from "./pages/CampusVirtualTour.jsx";
-
+import Classrooms from "./pages/Classrooms/Classrooms.jsx";
 
 function App() {
   return (
@@ -142,6 +142,17 @@ function App() {
             </>
           }
         />
+        <Route
+  path="/classrooms"
+  element={
+    <>
+      <Header />
+      <Classrooms />
+      <Footer />
+    </>
+  }
+/>
+
         <Route
           path="/prospectus"
           element={
